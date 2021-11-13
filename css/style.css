@@ -1,0 +1,105 @@
+h1 {
+    margin-top: 20px;
+}
+
+.cabecera {
+    background-image: url('https://images.wallpapersden.com/image/download/pokemon-pikachu-art_a25tbW6UmZqaraWkpJRmbmdlrWZlbWU.jpg');
+    background-position: center;
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+}
+
+.padre {
+    margin-top: 5%
+}
+
+.pokemon-item {
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left;
+    position: relative;
+    margin-bottom: 70px;
+}
+
+.pokemon-item__img {
+    width: 90%;
+    margin-left: 5%;
+    object-fit: cover;
+}
+
+.pokemon-item__details {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    font-size: 10px;
+    opacity: 0;
+    transition: 450ms opacity; 
+    padding: 10px; 
+    position: absolute;           
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: left; 
+    justify-content:flex-end;
+    flex-direction: column;
+}
+     
+.pokemon-item__details:hover {
+        opacity: 1;        
+}
+
+.pokemon-item__details--title {
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    
+}
+.pokemon-item__details--subtitle {
+    text-align: center;
+    font-size: 8px;
+    color: white;
+    font-weight: bold;
+    margin-top: 1px;
+}
+
+.pokemon_container:hover .pokemon-item {
+    opacity: 0.5;
+}
+
+.pokemon_container:hover .pokemon-item:hover {
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+.pokemon-item:hover ~ .pokemon-item {
+    transform: translate3d(100px, 0, 0);
+}
+
+@media (max-width: 500px) {
+    .pokemon-item  {
+        width: 180PX;
+        height: 225PX;
+    }
+    .pokemon-item__img {
+        width: 180PX;
+        height: 225PX;
+        object-fit: cover;
+    }
+    .pokemon__container:hover .pokemon-item:hover {
+        transform: scale(1.25);
+        opacity: 1;
+    }
+    .pokemon-item:hover ~ .pokemon-item {
+        transform: translate3d(50px, 0, 0);
+    }
+}
